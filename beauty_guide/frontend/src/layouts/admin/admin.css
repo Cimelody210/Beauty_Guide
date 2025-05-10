@@ -1,0 +1,124 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f7fc;
+  font-family: "Inter", sans-serif;
+}
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  background: #1a252f;
+}
+
+.sidebar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  font-size: 1rem;
+  border-left: none;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  border-left: none;
+}
+
+.sidebar-nav .nav-link svg {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.submenu {
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 20px;
+  border-left: none;
+}
+
+.submenu .nav-link {
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  border-left: none;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 15px;
+  background: #1a252f;
+  text-align: center;
+}
+
+.sidebar-footer .btn {
+  width: 100%;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  transition: all 0.3s;
+}
+
+.sidebar-footer .btn:hover {
+  background: #c0392b;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.top-navbar {
+  background: #ffffff;
+  padding: 15px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top-navbar .btn-primary {
+  border: none;
+}
+
+.content-area {
+  flex: 1;
+  padding: 20px;
+  background: #ecf0f1;
+}
+
+.admin-footer {
+  padding: 15px;
+  background: #ffffff;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+}
